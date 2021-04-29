@@ -1,7 +1,7 @@
 // List of links for each week with a key value pair.
 const links = [
-  { label: "Week 1", url: "https://christensen-colter.github.io/WDD-330/index.html"},
-  { label: "Week 2", url: "https://christensen-colter.github.io/WDD-330/week 2/mathmachine.html"}
+  { label: "Week 1", url: "index.html"},
+  { label: "Week 2", url: "Week 2/mathmachine.html"}
 ];
 
 // Function called when page loads to display a dynamic list of links.
