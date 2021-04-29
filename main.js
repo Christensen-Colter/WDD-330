@@ -1,7 +1,7 @@
 // List of links for each week with a key value pair.
 const links = [
   { label: "Week 1", url: "index.html"},
-  { label: "Week 2", url: ""}
+  { label: "Week 2", url: "/week 2/mathmachine.html"}
 ];
 
 // Function called when page loads to display a dynamic list of links.
