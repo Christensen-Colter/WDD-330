@@ -129,6 +129,15 @@
 
       // 7. sort Exercise
       // Sort the people alphabetically by last name
+      const alphaSort = inventors.sort(function(first, second){
+        if(first.last > second.last) {
+          return 1;
+        } else {
+          return -1;
+        };
+      });
+
+      console.table(alphaSort);
 
       // 8. Reduce Exercise
       // Sum up the instances of each of these
@@ -148,6 +157,14 @@
         'car',
         'truck'
       ];
+
+      const sumOf = data.reduce(function(result, item) {
+        return result += item;
+      });
+
+      console.log(sumOf);
+
+     
     </script>
   </body>
 </html>
