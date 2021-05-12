@@ -2,8 +2,8 @@
 const links = [
   { label: "Week 1", url: "Week 1/index.html"},
   { label: "Week 2", url: "Week 2/mathmachine.html"},
-  //add this weeks work URL
-  { label: "Week 3", url: ""}
+  { label: "Week 3", url: "Week 3/START.html"},
+  { label: "Week 4", url: ""}
 ];
 
 // Function called when page loads to display a dynamic list of links.
