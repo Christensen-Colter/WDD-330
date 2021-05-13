@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="main.js"></script>
     <style>
         tr, td {
             padding: 15px;
@@ -27,7 +26,8 @@
     <link rel="" href="" />
   </head>
   <body>
-      <table>
+
+      <table id="board">
           <tr>
               <td class="box"></td>
               <td class="box v"></td>
@@ -44,5 +44,40 @@
              <td class="box"></td>
           </tr>
       </table>
+
+      <button id="reset">Reset</button>
+
+      <script>
+          // Declare some variable to work with the DOM.
+        const board = document.getElementById("board");
+        const reset = document.getElementById("reset");
+
+        // Setup the player rotation.
+        const playerOne = "X";
+        const playerTwo = "O";
+        let turn = playerOne;
+
+        // Place piece places the last players value within the table at the target click, then changes the player out.
+        function placePiece(x) {
+            x.target.innerHTML = turn;
+            if(turn === playerOne) turn = playerTwo;
+            else turn = playerOne;
+        };
+
+        // Resets the board by walking through each row of the board and placing an empty space value in the cell.
+        function resetBoard() {
+            for (let i = 0; i < board.rows.length; i++) {
+                let row = board.rows[i];
+                for (let ii = 0; ii < row.cells.length; ii++) {
+                    row.cells[ii].innerHTML = '';
+                }
+            }
+        };
+
+        // Event listeners for placing a piece and resetting the board.
+        board.addEventListener("click", placePiece);
+        reset.addEventListener("click", resetBoard);
+
+      </script>
   </body>
 </html>
